@@ -1,0 +1,126 @@
+/* For my sanity, border-box everything */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Nanum Gothic', 'Nanum Gothic Coding', sans-serif;
+    font-size: medium;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.page-container {
+    margin: auto;
+    height: 100%;
+    max-height: 1200px;
+    width: 100%;
+    max-width: 1600px;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+     background-color: rgb(168, 212, 155);
+/*    
+
+    
+    background: url(https://lh3.googleusercontent.com/j07fy4tByynQV11gqRzPvMwxttmZpgnpu2QyLSCjY_LnB4hTSQ2rR8nenONETeW0Bm9cFODE23NvXWfoWCS1KM6aX6-bn76Z1MCK_kNBvHPcpanZTBxNceqajsMEYxwZn6RtKLr9HYUUBl-a3oKmnOOfAqI3jaQ5B8RKxvbJsXFNTzdzhtmjOzLwO9Z0qTAQmjXzHdE3taVk5L1RvXY0PZD4MuEzptkOs5rczswlo-L1cEx5jJM1_DU_cIrRFr0YvHLcfhvzv0rMMt8iujovb3r6knzjpf_EHGLJStCjIJceSEDX3pFouMYYCIcj_5ofhLcuT58p6eff30Aa_QMeBetBtcBGiIAUH7gaf4TF1lIooWAFxW6RZp3unK9oNqJ-iHKIG4FVeuCrxnHO0DD7Og4UZApdimxUVLkQPAyUc10civdKt4Z-5ibm6q2ZlDCaQo_dbJ2vnic2DCf4dyHb1bRoKKv0FkHUWCeFLwbj2tCgbqX1OpDLg2Is2ROIRa9fOzHa8URhbcmX24IhZjkDOJcDQ38-jB-24JgJh8JTCi7tRPOMv9siFRFxH6vcZ5BHaGy-lTz-vN6kQbYr7U2fbTIZGNhbb4bhqfVnP6c=w1619-h1215-no);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    border: 2px solid black;
+/*     background-blend-mode: saturation; */
+}
+
+.central-main {
+    margin: 0 auto;
+    max-width: 60em;
+    max-height: 40em;
+    padding: 1em;
+    
+    display: grid;
+    
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 75px 75px 1fr 1fr;
+    
+    grid-template-areas: 
+        "headshot title title"
+        "headshot contact contact"
+        "experience experience experience"
+        "education education education";
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    
+    overflow: hidden;
+}
+
+.cam-experience__items, .cam-education__items, .cam-details__contact-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cam-details__profile-picture {
+    grid-area: headshot;
+    
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.cam-details__my-name {
+    grid-area: title;
+    text-align: center;
+}
+
+.cam-details__contact-details {
+    grid-area: contact;
+}
+.cam-details__contact-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
+    height: 100%;
+}
+
+.cam-details__contact-item {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow:  ellipsis;
+}
+
+.cam-experience {
+    grid-area: experience;
+}
+
+
+
+.cam-education {
+    grid-area: education;
+}
+
+
