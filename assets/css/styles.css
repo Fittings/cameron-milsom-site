@@ -10,66 +10,56 @@ html {
     box-sizing: inherit;
 }
 
+h1, h2, h3 {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
+    background-color: blue;
+    min-height: inherit;
+    height: inherit;
     font-family: 'Nanum Gothic', 'Nanum Gothic Coding', sans-serif;
     font-size: medium;
-    height: 100%;
     margin: 0;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
+    padding: 20px;
+        
 }
 
 .page-container {
-    margin: auto;
-    height: 100%;
-    max-height: 1200px;
-    width: 100%;
-    max-width: 1600px;
-
+    background-color: rebeccapurple;
+    border: 2px solid black;
+    min-height: inherit;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-
-     background-color: rgb(168, 212, 155);
-/*    
-
-    
-    background: url(https://lh3.googleusercontent.com/j07fy4tByynQV11gqRzPvMwxttmZpgnpu2QyLSCjY_LnB4hTSQ2rR8nenONETeW0Bm9cFODE23NvXWfoWCS1KM6aX6-bn76Z1MCK_kNBvHPcpanZTBxNceqajsMEYxwZn6RtKLr9HYUUBl-a3oKmnOOfAqI3jaQ5B8RKxvbJsXFNTzdzhtmjOzLwO9Z0qTAQmjXzHdE3taVk5L1RvXY0PZD4MuEzptkOs5rczswlo-L1cEx5jJM1_DU_cIrRFr0YvHLcfhvzv0rMMt8iujovb3r6knzjpf_EHGLJStCjIJceSEDX3pFouMYYCIcj_5ofhLcuT58p6eff30Aa_QMeBetBtcBGiIAUH7gaf4TF1lIooWAFxW6RZp3unK9oNqJ-iHKIG4FVeuCrxnHO0DD7Og4UZApdimxUVLkQPAyUc10civdKt4Z-5ibm6q2ZlDCaQo_dbJ2vnic2DCf4dyHb1bRoKKv0FkHUWCeFLwbj2tCgbqX1OpDLg2Is2ROIRa9fOzHa8URhbcmX24IhZjkDOJcDQ38-jB-24JgJh8JTCi7tRPOMv9siFRFxH6vcZ5BHaGy-lTz-vN6kQbYr7U2fbTIZGNhbb4bhqfVnP6c=w1619-h1215-no);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-    border: 2px solid black;
-/*     background-blend-mode: saturation; */
+    align-items: center;
 }
 
 .central-main {
-    margin: 0 auto;
-    max-width: 60em;
-    max-height: 40em;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     
-    display: grid;
-    
-    grid-template-columns: 150px 1fr 1fr;
-    grid-template-rows: 75px 75px 1fr 1fr;
-    
-    grid-template-areas: 
-        "headshot title title"
-        "headshot contact contact"
-        "experience experience experience"
-        "education education education";
+    max-width: 900px;
     
     background-color: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    
-    overflow: hidden;
+}
+
+.cam-details__container {
+    padding: 0.2rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #c0ffee;
 }
 
 .cam-experience__items, .cam-education__items, .cam-details__contact-items {
@@ -79,33 +69,46 @@ body {
 }
 
 .cam-details__profile-picture {
-    grid-area: headshot;
-    
-    width: 100%;
-    height: 100%;
     border: 2px solid black;
+    padding: 2px;
+    max-width: 125px;
+    max-height: 125px;
+    min-width: 90px;
+    min-height: 90px;
+    object-fit: cover;
+}
+
+.cam-details__details-container {
+    
+    flex-grow: 1;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 .cam-details__my-name {
     grid-area: title;
     text-align: center;
+    background-color: red;
+    display: block;
+    margin: 0;
 }
 
 .cam-details__contact-details {
-    grid-area: contact;
+    flex-grow: 1;
+    display: flex;
 }
 .cam-details__contact-items {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-
-    height: 100%;
+    justify-content: center;
+    background-color: yellow;
 }
 
 .cam-details__contact-item {
-    width: 50%;
     display: inline-block;
     text-align: center;
     white-space: nowrap; 
