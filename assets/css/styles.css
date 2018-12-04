@@ -27,7 +27,27 @@ body {
     margin: 0;
     padding: 20px;
         
-    background-color: #000;
+    background: linear-gradient(#1C2530, #0B3261);
+}
+body:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -100;
+    
+    background: linear-gradient(#091C33, #13241F);
+    opacity: 0;
+    animation: opacity-flick 10s alternate infinite;
+}
+@keyframes opacity-flick {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .page-container {
