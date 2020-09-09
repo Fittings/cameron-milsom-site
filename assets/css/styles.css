@@ -10,12 +10,6 @@ html {
     box-sizing: inherit;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    font-size: 1em;
-    font-weight: 600;
-}
-
 html {
     height: 100%;
     min-height: 100%;
@@ -25,6 +19,7 @@ body {
     min-height: inherit;
     height: inherit;
     font-family: 'Nanum Gothic', 'Nanum Gothic Coding', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: medium;
     margin: 0;
     padding: 20px;
@@ -50,6 +45,22 @@ body:before {
     100% {
         opacity: 1;
     }
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+a {
+    color: #1e8bff;
+}
+a:visited {
+    color: #1e8bff;
+}
+a:hover {
+    text-decoration: underline;
 }
 
 .page-container {
@@ -122,8 +133,9 @@ body:before {
 .cam-details__my-name {
     display: block;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 0.6rem;
+    font-weight: 400;
 }
 
 .cam-details__contact-details {
@@ -153,6 +165,7 @@ body:before {
     font-size: 15px;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .cam-experience__divider {
@@ -184,7 +197,7 @@ body:before {
 
 .cam-experience__tech {
     display: block;
-    font-size: 0.8em;
+    font-size: 0.9rem;
     color: rgb(68, 68, 68);
     font-weight: 800;
 
@@ -195,21 +208,23 @@ body:before {
     margin-bottom: .7rem;
 }
 .tag {
+    font-family: 'Nanum Gothic', 'Nanum Gothic Coding', sans-serif;
     margin: 0 0.1rem;
     border-radius: 0.3rem;
     padding: 0.1rem 0.4rem;
+    font-size: 12px;
 }
 .tag__lang {
-    background-color: #ccecff;
-    color: #0a496f;
+    background-color: #d0ebfb;
+    color: #1783c4;
 }
 .tag__frame {
-    background-color: #b3fbd3;
-    color: #235338;
+    background-color: #c7fbde;
+    color: #31734e;
 }
 .tag__plat {
-    background-color: #ffc5a9;
-    color: #8c5033;
+    background-color: #ebe5ff;
+    color: #7b64ce;
 }
 .tag-delim {
     margin: 0 0.4rem;
@@ -222,8 +237,8 @@ body:before {
 
 .small-icon {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 17px;
+    width: 17px;
     margin-right: 0.5em;
     align-self: center;
     object-fit: contain;
